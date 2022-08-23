@@ -8,9 +8,9 @@ import Clock from "./components/container/clock";
 function App() {
   return (
     <div >
-      <Clock></Clock>
+     {/*  <Clock></Clock> */}
     {/* <h1>*****ejemplo de props.children********</h1> */}
-    {/*  <ContactListComponent></ContactListComponent> */}
+     <ContactListComponent></ContactListComponent>
    {/*  <MiComponenteConContexto></MiComponenteConContexto> */}
   {/*   <Ejemplos4 nombre="Luis" >
        <h3>

@@ -6,9 +6,9 @@ import '../../styles/contacto.scss'
 const ContactoComponent = ({contacto}) => {
 
   useEffect(()=>{
-    console.log('contacto creado')
+   console.log(contacto)
     return () => {
-      console.log(`contacto:  ${contacto.name} a sido creado`)
+   //   console.log(`contacto:  ${contacto.name} a sido creado`)
     }
   },[contacto] )
 
@@ -19,7 +19,28 @@ const ContactoComponent = ({contacto}) => {
  }
 
   return (
-    <div>
+    <tr className="fw-normal">
+      <td>
+        <span className="ms-2">{contacto.nombre}</span>
+      </td>
+      <td className="align-middle">
+        <span>{contacto.apellido}</span>
+      </td>
+      <td className="align-middle">
+        <span>{contacto.email}</span>
+      </td>
+      <td className="align-middle">
+        <span>
+          {contacto.conectado ? (
+            <i className="bi bi-person-check" style={{ color: "green" }}></i>
+          ) : (
+            <i className="bi bi-person-x-fill" style={{ color: "grey" }}></i>
+          )}
+        </span>
+      </td>
+    </tr>
+
+    /*     <div>
       
          <h2 className='contacto'>
            Nombre:{ contacto.nombre }
@@ -35,7 +56,7 @@ const ContactoComponent = ({contacto}) => {
          </h5>
         
       
-    </div> 
+    </div>  */
   );
 }
 
