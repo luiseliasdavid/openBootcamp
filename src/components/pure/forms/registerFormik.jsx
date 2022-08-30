@@ -23,7 +23,7 @@ function RegisterFormik() {
         {
             userName: Yup.string()
                 .min(6,'userName must have 6 characters at least')
-                .min(12, 'userName must have lees than 12 characters')
+                .max(12, 'userName must have lees than 12 characters')
                 .required('userName is required'),
             email: Yup.string()
                  .email('Invalid mail format')

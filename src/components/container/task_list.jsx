@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { LEVEL } from '../../models/level';
 import { Task } from '../../models/task.class';
 import TaskForm from '../pure/forms/taskForm';
+import TaskFormik from '../pure/forms/TaskFormik';
 import TaskComponent from '../pure/task';
 
 const TaskListComponent = () => {
@@ -102,6 +103,7 @@ const isLoadingStyle= {
         </div>
       </div>
             <TaskForm add={addTask} tasksLength={tasks.length}></TaskForm>
+            <TaskFormik add={addTask} tasksLength={tasks.length}></TaskFormik>
     </div>
   );
 };

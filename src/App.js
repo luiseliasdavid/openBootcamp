@@ -8,6 +8,7 @@ import Father from "./components/container/father";
 import OpcionalRender from "./components/pure/opcionalRender";
 import LoginFormik from "./components/pure/forms/loginFormik";
 import RegisterFormik from "./components/pure/forms/registerFormik";
+import TaskFormik from "./components/pure/forms/TaskFormik";
 
 function App() {
   return (
@@ -22,10 +23,11 @@ function App() {
        
     </Ejemplos4> */}
     {/* <Father></Father> */}
-     {/*  <TaskListComponent></TaskListComponent> */}
+      <TaskListComponent></TaskListComponent>
      {/* <OpcionalRender></OpcionalRender> */}
      {/* <LoginFormik></LoginFormik> */}
-     <RegisterFormik></RegisterFormik>
+     {/* <RegisterFormik></RegisterFormik> */}
+    
     </div>
   );
 }
