@@ -5,6 +5,9 @@ import Ejemplos4 from "./hooks/ejemplos4";
 import './App.css'
 import Clock from "./components/container/clock";
 import Father from "./components/container/father";
+import OpcionalRender from "./components/pure/opcionalRender";
+import LoginFormik from "./components/pure/forms/loginFormik";
+import RegisterFormik from "./components/pure/forms/registerFormik";
 
 function App() {
   return (
@@ -16,10 +19,13 @@ function App() {
        <h3>
         Contenido del props.children
        </h3>
-
+       
     </Ejemplos4> */}
     {/* <Father></Father> */}
-      <TaskListComponent></TaskListComponent>
+     {/*  <TaskListComponent></TaskListComponent> */}
+     {/* <OpcionalRender></OpcionalRender> */}
+     {/* <LoginFormik></LoginFormik> */}
+     <RegisterFormik></RegisterFormik>
     </div>
   );
 }

@@ -1,6 +1,8 @@
 import React, {useRef,useEffect}  from 'react'
 import PropTypes from 'prop-types'
 import { Task } from '../../models/task.class'
+
+
 import '../../styles/task.scss'
 
 const TaskComponent = ({task, completed, deleteTask}) => {
@@ -12,10 +14,19 @@ const TaskComponent = ({task, completed, deleteTask}) => {
     }
   },[task] )
 
- const estilo = {
-  color:'green',
+ const tasksCompleted = {
+  
   fontWeight: 'lighter',
-  textDecorationStyle: 'dotted'
+  textDecorationStyle: 'dotted',
+  color: 'grey',
+  textDecoration: 'line-through'
+
+}
+const tasksPending = {
+ 
+  textDecorationStyle: 'dotted',
+  fontWeight: 'bold',
+  color: 'tomato'
  }
 
  function taskLevel (){
@@ -36,7 +47,7 @@ function taskCompleted (){
 }
 
   return (
-    <tr className="fw-normal">
+    <tr style={task.completed? tasksCompleted : tasksPending}>
       <td>
         <span className="ms-2">{task.name}</span>
       </td>
