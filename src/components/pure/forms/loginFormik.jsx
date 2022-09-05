@@ -1,8 +1,11 @@
 import React from 'react'
 import {Formik, Field, Form, ErrorMessage} from 'formik'
 import * as yup from 'yup'
+import {useNavigate} from 'react-router-dom'
 
 function LoginFormik() {
+
+  const navigate= useNavigate()
 
     const loginSchema= yup.object().shape(
         {
@@ -20,7 +23,9 @@ function LoginFormik() {
         password: ''
     }
 
-
+const toRegister = ()=>{
+  navigate('/register')
+}
   return (
     <div>
       <h4>Login Formik</h4>
@@ -35,6 +40,8 @@ function LoginFormik() {
           alert(JSON.stringify(values, null, 2));
           //we save data in local storage
           localStorage.setItem("credencials", values);
+          window.location.reload(true)
+          
         }}
       >
         {({
@@ -74,6 +81,8 @@ function LoginFormik() {
           </Form>
         )}
       </Formik>
+         <br/>
+        <p>do you haven't account ?</p><button onClick={toRegister} >Register</button>
     </div>
   );
 }
