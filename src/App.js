@@ -12,6 +12,9 @@ import TaskFormik from "./components/pure/forms/TaskFormik";
 import AsyncExample from "./components/pure/forms/AsyncExample";
 import ObservableExample from "./components/pure/forms/ObservableExample";
 import FetchExample from './components/pure/forms/FetchExample'
+import AxiosExample from "./components/pure/forms/AxiosExample";
+import AxiosChuckNorris from "./components/pure/forms/AxiosChuckNorris";
+
 
 function App() {
   return (
@@ -34,7 +37,9 @@ function App() {
      {/* ejemplos de asincronia */}
      {/* <AsyncExample/> */}
      {/* <ObservableExample></ObservableExample> */}
-     <FetchExample></FetchExample>
+     {/* <FetchExample></FetchExample> */}
+     {/* <AxiosExample></AxiosExample> */}
+     <AxiosChuckNorris></AxiosChuckNorris>
     
     </div>
   );
