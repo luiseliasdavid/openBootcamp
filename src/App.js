@@ -9,6 +9,9 @@ import OpcionalRender from "./components/pure/opcionalRender";
 import LoginFormik from "./components/pure/forms/loginFormik";
 import RegisterFormik from "./components/pure/forms/registerFormik";
 import TaskFormik from "./components/pure/forms/TaskFormik";
+import AsyncExample from "./components/pure/forms/AsyncExample";
+import ObservableExample from "./components/pure/forms/ObservableExample";
+import FetchExample from './components/pure/forms/FetchExample'
 
 function App() {
   return (
@@ -27,6 +30,11 @@ function App() {
      {/* <OpcionalRender></OpcionalRender> */}
      {/* <LoginFormik></LoginFormik> */}
      {/* <RegisterFormik></RegisterFormik> */}
+
+     {/* ejemplos de asincronia */}
+     {/* <AsyncExample/> */}
+     {/* <ObservableExample></ObservableExample> */}
+     <FetchExample></FetchExample>
     
     </div>
   );
