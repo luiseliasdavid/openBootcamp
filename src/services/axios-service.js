@@ -8,6 +8,9 @@ export  function getRandomUser (){
 })
 }
 
+
+
+
 export function getRandomJoke (){
     return chucknorris.get('/',{
         validateStatus: function (status) {

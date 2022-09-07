@@ -14,6 +14,7 @@ import ObservableExample from "./components/pure/forms/ObservableExample";
 import FetchExample from './components/pure/forms/FetchExample'
 import AxiosExample from "./components/pure/forms/AxiosExample";
 import AxiosChuckNorris from "./components/pure/forms/AxiosChuckNorris";
+import AxiosCRUDExample from "./components/pure/forms/AxiosCRUDExample";
 
 
 function App() {
@@ -38,8 +39,9 @@ function App() {
      {/* <AsyncExample/> */}
      {/* <ObservableExample></ObservableExample> */}
      {/* <FetchExample></FetchExample> */}
+     {/* <AxiosChuckNorris></AxiosChuckNorris> */}
      {/* <AxiosExample></AxiosExample> */}
-     <AxiosChuckNorris></AxiosChuckNorris>
+     <AxiosCRUDExample></AxiosCRUDExample>
     
     </div>
   );

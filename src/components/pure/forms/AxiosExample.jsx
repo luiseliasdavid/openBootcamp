@@ -12,7 +12,7 @@ const obteinUser= ()=>{
 getRandomUser()
 .then((response)=>{
     if (response.status===200){
-        setUser(response.data.results)
+        setUser(response.data.results[0])
     }
     //console.log(response)
 })
@@ -24,21 +24,19 @@ return (
     <div>
       <h1>Axios Examples</h1> 
       {
-        user?
-         (<div>
-        {/*  <img alt='avatar' src={user.picture.large}></img> */}
-         <h2>{user[0].name.title} {user[0].name.first} {user[0].name.last} </h2>
-            <h3> {user[0].email} </h3>
+        user && <div>
+         <img alt='avatar' src={user.picture.large}></img>
+         <h2>{user.name.title} {user.name.first} {user.name.last} </h2>
+            <h3> {user.email} </h3>
 
-          </div> )
-         :
-          ( 
+          </div> }
+         
             <div>
             <h2> Generate a new user </h2>
            <button  onClick={obteinUser}>generate a new user</button>
           </div>
-           )
-      }
+           
+      
     </div>
   )
 }
